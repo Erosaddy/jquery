@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>팝업 vs 모달</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+        .coupon {
+            width: 277px;
+            height: 366px;
+            position: relative
+        }
+        [type=image] {
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        #modal {
+            background-color: rgba 0, 0, 0, .5;
+            width: 100vw;
+            height: 100vh;
+        }
+        [type=button] {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border: 0;
+            background-color: black;
+            color: white;
+            right: -15px;
+            top: -15px;
+            border-radius: 50%;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <h1>팝업 앤드 모달</h1>
+    <p>팝업은 독립적인 창. 모달은 자식창</p>
+
+    <div id="modal">
+        <div class="coupon">
+            <input type="button" value="x" id="closer">
+            <img src="images/coupon.jpg" alt="">
+            <input type="image" src="images/down_bt.png" alt="쿠폰 다운로드">
+        </div>
+    </div>
+    <script>
+        $(function() {
+            $("[type=image]").on("click", function() {
+                $("#modal").css("display", "none");
+                $("#modal").hide();
+                $("#modal").fadeOut("fast");
+                alert("쿠폰이 모두 소진되었어용.\n아쉽게 되었네요.")
+            
+            })
+            $("[type=image]").on("click", function() {
+
+            });
+        });
+    </script>
+
+</body>
+</html>

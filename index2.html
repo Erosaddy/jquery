@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자실습 제이쿼리</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        .item {
+            position: relative;
+        }
+        #showBt {
+            position: absolute;
+            left: 5%;
+            bottom: 5%;
+        }
+        #detail {
+            display: none;
+        }
+        .hide {
+            display: none;
+        }
+        .show {
+            display: block !important;
+        }
+    </style>
+</head>
+<body>
+    <h1> z </h1>
+    <div class="item">
+        <img src="https://picsum.photos/id/1/300/250" alt="picsum photos">
+        <button id="showBt">상세설명 표시</button>
+    </div>
+    <div id="detail class="hide">
+        <p>어</p>
+        <p>쩌</p>
+        <p>ㅁㄴㅇㄻㄴㅇ</p>
+        <p>ㄱㄱㄱㄱ</p>
+        <button id="hideBt"></button>
+    </div>
+       
+         <script>
+          
+            $(function() {
+                $("#showBt").on("click")
+            })
+         </script>
+    
+</body>
+</html>
